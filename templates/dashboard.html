@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Cultivos - AgroSmartic{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4 text-center">Cultivos</h2>
+    <div class="row">
+        <!-- Formulario de Registro -->
+        <div class="col-md-6 mb-4">
+            <form method="POST" class="shadow p-4 rounded">
+                <h4 class="mb-3">Registrar Cultivo</h4>
+                <div class="mb-3">
+                    <label for="nombre_cultivo" class="form-label">Nombre del Cultivo</label>
+                    <input type="text" class="form-control" id="nombre_cultivo" name="nombre_cultivo" placeholder="Ej. Maíz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ej. 100" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tipo_producto" class="form-label">Tipo de Producto</label>
+                    <input type="text" class="form-control" id="tipo_producto" name="tipo_producto" placeholder="Ej. Granos" required>
+                </div>
+                <div class="mb-3">
+                    <label for="parcela" class="form-label">Nombre de la Parcela</label>
+                    <input type="text" class="form-control" id="parcela" name="parcela" placeholder="Ej. Parcela Norte" required>
+                </div>
+               
+                <button type="submit" class="btn btn-success w-100">Registrar Cultivo</button>
+            </form>
+        </div>
+
+        <!-- Lista de Cultivos -->
+        <div class="col-md-6">
+            <h4 class="mb-3">Cultivos Registrados</h4>
+            {% if cultivos %}
+            <ul class="list-group">
+                {% for cultivo in cultivos %}
+                <li class="list-group-item">
+                    <strong>Cultivo:</strong> {{ cultivo[0] }} <br>
+                    <strong>Cantidad:</strong> {{ cultivo[1] }} <br>
+                    <strong>Tipo:</strong> {{ cultivo[2] }} <br>
+                    <strong>Parcela:</strong> {{ cultivo[3] }} <br>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-muted">No hay cultivos registrados.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

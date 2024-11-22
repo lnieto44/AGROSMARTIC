@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Alertas - AGROSMARTIC{% endblock %}
+{% block content %}
+<h2>Alertas de Cosecha</h2>
+<p>A continuación, se muestran las alertas generadas para tus cultivos:</p>
+
+{% if alertas %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Cultivo</th>
+      <th>Ubicación</th>
+      <th>Fecha</th>
+      <th>Condición Climática</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for alerta in alertas %}
+    <tr>
+      <td>{{ alerta.cultivo }}</td>
+      <td>{{ alerta.ubicacion }}</td>
+      <td>{{ alerta.fecha }}</td>
+      <td>{{ alerta.condicion }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No hay alertas generadas en este momento.</p>
+{% endif %}
+{% endblock %}
+

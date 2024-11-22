@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Contáctanos - AGROSMARTIC{% endblock %}
+{% block content %}
+<div class="container py-5" style="background-color: #FFF8E7;">
+  <h2 class="text-center mb-4" style="color: #4CAF50;">Contáctanos</h2>
+  <p class="text-center mb-4" style="color: #616161;">
+    Si tienes dudas o consultas, estamos aquí para ayudarte.
+  </p>
+  <div class="row g-4">
+    <!-- Información de Contacto -->
+    <div class="col-lg-5 col-md-6">
+      <div class="card border-0 shadow-sm" style="background-color: #FFF8E7;">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-4" style="color: #4CAF50;">Información de Contacto</h5>
+          <ul class="list-unstyled text-start" style="color: #616161;">
+            <li class="mb-3">
+              <i class="fas fa-envelope" style="color: #03A9F4;"></i> 
+              <strong>Email:</strong> 
+              <a href="mailto:contacto@agrosmartic.com" class="text-decoration-none" style="color: #03A9F4;">contacto@agrosmartic.com</a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-phone-alt" style="color: #4CAF50;"></i> 
+              <strong>Teléfono:</strong> 
+              <a href="tel:+573133898638" class="text-decoration-none" style="color: #4CAF50;">+57 313 389 8638</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt" style="color: #FFCA28;"></i> 
+              <strong>Dirección:</strong> Bogotá, Colombia
+            </li>
+          </ul>
+          <img src="/static/images/contact-us.jpg" alt="Contáctanos" class="img-fluid rounded shadow-sm mt-4">
+        </div>
+      </div>
+    </div>
+    <!-- Formulario -->
+    <div class="col-lg-7 col-md-6">
+      <div class="card border-0 shadow-sm" style="background-color: #FFF8E7;">
+        <div class="card-body">
+          <h5 class="card-title mb-4 text-center" style="color: #4CAF50;">Escríbenos</h5>
+          <form>
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text" style="background-color: #4CAF50; color: #FFFFFF;"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text" style="background-color: #4CAF50; color: #FFFFFF;"><i class="fas fa-envelope"></i></span>
+                <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text" style="background-color: #4CAF50; color: #FFFFFF;"><i class="fas fa-comment-dots"></i></span>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn w-100" style="background-color: #4CAF50; color: #FFFFFF;"
+                  onmouseover="this.style.backgroundColor='#03A9F4'" 
+                  onmouseout="this.style.backgroundColor='#4CAF50'">
+            Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

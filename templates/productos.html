@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Productos y Demanda{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center">Productos Cosechados y Demanda Estimada</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre del Cultivo</th>
+                <th>Tipo de Producto</th>
+                <th>Cantidad</th>
+                <th>Región</th>
+                <th>Recomendaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cultivo, tipo, cantidad, region, recomendaciones in productos %}
+            <tr>
+                <td>{{ cultivo }}</td>
+                <td>{{ tipo }}</td>
+                <td>{{ cantidad }}</td>
+                <td>{{ region if region else "No especificada" }}</td>
+                <td>{{ recomendaciones if recomendaciones else "Sin recomendaciones" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

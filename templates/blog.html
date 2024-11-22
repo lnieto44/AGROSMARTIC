@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Blog - AGROSMARTIC{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Blog de AgroSmartic</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/static/images/blog1.jpg" class="card-img-top" alt="Optimización de Cultivos">
+        <div class="card-body">
+          <h5 class="card-title">Cómo optimizar tus cultivos</h5>
+          <p class="card-text">Descubre consejos prácticos para maximizar el rendimiento de tus tierras.</p>
+          <a href="#" class="btn btn-secondary">Leer más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/static/images/blog2.jpg" class="card-img-top" alt="Sostenibilidad Agrícola">
+        <div class="card-body">
+          <h5 class="card-title">La importancia de la sostenibilidad</h5>
+          <p class="card-text">Conoce cómo la tecnología puede ayudarte a ser más sostenible.</p>
+          <a href="#" class="btn btn-secondary">Leer más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/static/images/blog3.jpg" class="card-img-top" alt="Tendencias del Mercado">
+        <div class="card-body">
+          <h5 class="card-title">Claves del mercado agrícola</h5>
+          <p class="card-text">Entiende las tendencias de mercado y planifica mejor tus cosechas.</p>
+          <a href="#" class="btn btn-secondary">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

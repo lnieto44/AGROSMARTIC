@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}Inicio - AgroSmartic{% endblock %}
+{% block content %}
+
+<!-- Hero Section (Banner) -->
+<div class="hero-banner text-center text-light" data-aos="fade-in" data-aos-duration="2000">
+  <div class="overlay">
+    <h1 class="display-4">Bienvenido a AgroSmartic</h1>
+    <p class="lead">Tecnología agrícola para un futuro más sostenible.</p>
+    <a href="{{ url_for('registro') }}" class="btn btn-success btn-lg">Comienza Ahora</a>
+  </div>
+</div>
+
+<!-- Beneficios -->
+<div class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1000">¿Por qué elegir AgroSmartic?</h2>
+      <div class="row text-center gy-4">
+        <!-- Beneficio 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <i class="fas fa-seedling fa-3x text-success mb-3"></i>
+              <h5 class="card-title">Gestión Inteligente</h5>
+              <p class="card-text">Organiza tus cultivos y optimiza tu producción agrícola.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Beneficio 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Alertas Climáticas</h5>
+              <p class="card-text">Recibe notificaciones sobre condiciones climáticas críticas.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Beneficio 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+              <h5 class="card-title">Demanda del Mercado</h5>
+              <p class="card-text">Conoce los productos más demandados en tu región.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+<!-- Características con Imágenes -->
+<div class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1000">Lo Que Ofrecemos</h2>
+      <div class="row gy-4">
+        <!-- Característica 1 -->
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+          <div class="d-flex align-items-center">
+            <img src="/static/images/registro_cultivos.png" alt="Registro de Cultivos" class="img-fluid rounded shadow-sm me-3" style="width: 100px; height: 100px; object-fit: cover;">
+            <div>
+              <h5>Registro de Cultivos</h5>
+              <p>Registra la cantidad y tipos de productos cosechados por finca o parcela.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Característica 2 -->
+        <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="d-flex align-items-center">
+            <img src="/static/images/planificacion_precisa.png" alt="Planificación Precisa" class="img-fluid rounded shadow-sm me-3" style="width: 100px; height: 100px; object-fit: cover;">
+            <div>
+              <h5>Planificación Precisa</h5>
+              <p>Genera alertas basadas en datos históricos y predicciones climáticas.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Característica 3 -->
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+          <div class="d-flex align-items-center">
+            <img src="/static/images/consulta_mercado.jpg" alt="Consulta del Mercado" class="img-fluid rounded shadow-sm me-3" style="width: 100px; height: 100px; object-fit: cover;">
+            <div>
+              <h5>Consulta del Mercado</h5>
+              <p>Obtén recomendaciones básicas de siembra y cosecha según la demanda.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Característica 4 -->
+        <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="d-flex align-items-center">
+            <img src="/static/images/sostenibilidad.jpg" alt="Sostenibilidad" class="img-fluid rounded shadow-sm me-3" style="width: 100px; height: 100px; object-fit: cover;">
+            <div>
+              <h5>Sostenibilidad</h5>
+              <p>Optimiza el uso de recursos para una agricultura más ecológica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- testimonios-->
+
+<div class="bg-success py-5 text-light">
+    <h2 class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1000">Lo Que Dicen Nuestros Usuarios</h2>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="custom-card p-4 shadow-sm border-0 bg-light text-dark">
+            <p>"AgroSmart ha transformado mi manera de trabajar. Ahora puedo planificar mis cultivos con precisión y ahorrar recursos."</p>
+            <h6>- Juan Pérez, Agricultor</h6>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="custom-card p-4 shadow-sm border-0 bg-light text-dark">
+            <p>"Gracias a AgroSmartic, he aumentado mi productividad en un 30%. ¡Es una herramienta imprescindible!"</p>
+            <h6>- María López, Productora</h6>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <div class="custom-card p-4 shadow-sm border-0 bg-light text-dark">
+            <p>"La sostenibilidad de mis cultivos ha mejorado considerablemente. Recomiendo AgroSmart a todos los agricultores."</p>
+            <h6>- Carlos Martínez, Empresario Agrícola</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- impacto agropecuario -->
+
+<div class="bg-success py-5 text-light">
+    <h2 class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1000">Impacto de AgroSmart</h2>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3" data-aos="fade-up" data-aos-duration="1000">
+          <h3>50%</h3>
+          <p>Reducción del desperdicio de agua</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <h3>30%</h3>
+          <p>Aumento en la productividad agrícola</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <h3>500+</h3>
+          <p>Usuarios satisfechos</p>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          <h3>1000+</h3>
+          <p>Hectáreas gestionadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+{% endblock %}

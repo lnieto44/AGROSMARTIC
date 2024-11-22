@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Analítica de Tráfico{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4" style="color: #4CAF50;">Analítica de Tráfico</h2>
+
+  <!-- Total de visitas -->
+  <div class="mb-4 text-center">
+    <h4 style="color: #616161;">Total de Visitas:</h4>
+    <p class="display-4" style="color: #4CAF50;">{{ total_visitas }}</p>
+  </div>
+
+  <!-- Visitas por día -->
+  <div>
+    <h5 style="color: #616161;">Visitas por Día (últimos 7 días):</h5>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Visitas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for fecha, visitas in visitas_por_dia %}
+        <tr>
+          <td>{{ fecha }}</td>
+          <td>{{ visitas }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

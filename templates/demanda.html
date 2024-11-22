@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Demanda Regional - AgroSmartic{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4">Consulta de Demanda por Región</h2>
+  
+  <!-- Formulario para seleccionar región -->
+  <form method="POST" class="mb-4">
+    <div class="mb-3">
+      <label for="region" class="form-label">Selecciona una Región</label>
+      <select class="form-control" id="region" name="region" required>
+        <option value="Andina">Andina</option>
+        <option value="Caribe">Caribe</option>
+        <option value="Pacífica">Pacífica</option>
+        <option value="Orinoquía">Orinoquía</option>
+        <option value="Amazonía">Amazonía</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Buscar Demanda</button>
+  </form>
+
+  <!-- Mensaje si no hay datos -->
+  {% if mensaje %}
+  <div class="alert alert-warning text-center">{{ mensaje }}</div>
+  {% endif %}
+
+  <!-- Mostrar resultados -->
+  {% if resultados %}
+  <h4 class="mt-4">Resultados:</h4>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Tipo de Producto</th>
+        <th>Región</th>
+        <th>Recomendaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for resultado in resultados %}
+      <tr>
+        <td>{{ resultado[0] }}</td>
+        <td>{{ resultado[1] }}</td>
+        <td>{{ resultado[2] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}

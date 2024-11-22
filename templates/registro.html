@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Registro - AgroSmartic{% endblock %}
+{% block content %}
+<div class="container py-5 d-flex justify-content-center align-items-center">
+    <form method="POST" class="shadow p-4 rounded">
+        <h2 class="text-center mb-4">Regístrate</h2>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" required>
+        </div>
+        <div class="mb-3">
+            <label for="contraseña" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Crea una contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+    </form>
+</div>
+
+<!-- SweetAlert2 -->
+{% if mensaje %}
+<script>
+    Swal.fire({
+        icon: '{{ tipo }}', // Tipo: success o error
+        title: '{{ mensaje }}', // Mensaje enviado desde Flask
+        confirmButtonText: 'Aceptar'
+    }).then((result) => {
+        if (result.isConfirmed && '{{ tipo }}' === 'success') {
+            // Redirige al inicio de sesión si el registro fue exitoso
+            window.location.href = "/login";
+        }
+    });
+</script>
+{% endif %}
+{% endblock %}
+
+
+
+
+

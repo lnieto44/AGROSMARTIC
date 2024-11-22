@@ -1,0 +1,408 @@
+/* Colores de la paleta */
+:root {
+    --cafe-cortado: #FFF8E7;   /* Fondo principal */
+    --gris-oscuro: #616161;    /* Texto */
+    --verde-oscuro: #0C2727;   /* Fondo Navbar y Footer */
+    --verde-natural: #4CAF50;  /* Botones principales */
+    --azul: #4A90E2;           /* Botones secundarios */
+    --amarillo: #FFCA28;       /* Alertas y etiquetas */
+  }
+  
+  /* General */
+  body {
+    background-color: var(--cafe-cortado);
+    color: var(--gris-oscuro);
+  }
+  
+  .navbar {
+    background-color: var(--verde-oscuro);
+  }
+  
+  .navbar-brand {
+    color: var(--cafe-cortado) !important;
+    font-weight: bold;
+  }
+  
+
+  
+  /* Botones */
+  .btn-primary {
+    background-color: var(--verde-natural);
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: var(--azul);
+    border: none;
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color: var(--amarillo);
+    border: none;
+    color: var(--gris-oscuro);
+  }
+  
+  /* Tablas */
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--cafe-cortado);
+  }
+  
+  .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+  }
+
+
+  /* Alertas */
+  .alert-warning {
+    background-color: var(--amarillo);
+    color: var(--gris-oscuro);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    margin-top: auto;
+    background-color: #0C2727; /* Verde oscuro */
+    color: #FFF8E7; /* Café cortado */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Hero Banner */
+.hero-banners {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('/static/images/banner.jpeg') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-banners .overlay {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  /* Hero Banner */
+.hero-banner {
+    background: url('/static/images/banner.jpeg') center/cover no-repeat; /* Fondo adaptable */
+    aspect-ratio: 1280 / 426; /* Mantener proporción 1280x426 */
+    width: 100%; /* Ancho siempre al 100% */
+    display: flex; /* Alinear contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    position: relative;
+    
+  }
+
+  
+  /* Superposición Oscura */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposición negra con opacidad */
+    z-index: 1; /* Asegurar que esté detrás del texto */
+  }
+  
+  /* Estilo para el texto y botones */
+  .hero-banner .overlay {
+    position: relative;
+    z-index: 2; /* Encima del overlay */
+    text-align: center;
+    color: white; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para texto */
+    padding: 20px;
+  }
+  
+  .hero-banner h1 {
+    font-size: 2.5rem; /* Tamaño del título */
+    margin-bottom: 10px;
+  }
+  
+  .hero-banner p {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustes Responsivos */
+  @media (max-width: 768px) {
+    .hero-banner {
+      background-size: contain; /* Asegurar que toda la imagen sea visible */
+      background-repeat: no-repeat;
+    }
+  
+    .hero-banner h1 {
+      font-size: 1.8rem; /* Reducir tamaño de texto */
+    }
+  
+    .hero-banner p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-banner h1 {
+      font-size: 1.5rem; /* Reducir aún más en pantallas pequeñas */
+    }
+  
+    .hero-banner p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+/* Beneficios: Tarjetas */
+.card {
+  background-color: var(--cafe-cortado); /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.card-title {
+  font-weight: bold;
+  color: var(--verde-oscuro); /* Verde oscuro */
+}
+
+.card-text {
+  color: var(--gris-oscuro); /* Gris oscuro */
+}
+
+/* Fondo de la sección */
+.bg-light {
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Íconos */
+.card-body i {
+  margin-bottom: 15px;
+}
+
+
+  /* Testimonios */
+.card {
+    background-color: var(--cafe-cortado);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h6 {
+    font-weight: bold;
+    color: var(--verde-oscuro);
+  }
+
+  /* Testimonios */
+.card {
+    background-color: var(--cafe-cortado); /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  }
+  
+  .card p {
+    color: var(--gris-oscuro); /* Texto principal gris oscuro */
+    font-size: 1rem; /* Tamaño de texto cómodo para leer */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin-bottom: 10px; /* Separación del párrafo con el nombre */
+  }
+  
+  .card h6 {
+    color: var(--verde-oscuro); /* Nombre del autor en verde oscuro */
+    font-weight: bold; /* Resaltar el nombre */
+    margin-top: 10px; /* Espaciado superior */
+  }
+  
+  .bg-light.text-dark .card {
+    background-color: var(--cafe-cortado); /* Asegurar fondo claro */
+    color: var(--gris-oscuro); /* Asegurar texto oscuro */
+  }
+  
+  
+  /* Estadísticas */
+  .bg-success .row h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--amarillo);
+  }
+  
+ /* Estilo para las imágenes */
+.img-fluid {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  /* Espaciado y alineación */
+  .d-flex {
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .d-flex img {
+    margin-right: 15px; /* Espaciado entre imagen y texto */
+  }
+  
+  /* blog-imagesn */
+  .card-img-top {
+    height: 200px; /* Altura fija */
+    width: 100%; /* Ajuste completo al ancho del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen recortándola si es necesario */
+  }
+  /* Tarjetas del Equipo */
+.team-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  }
+  
+  .team-card img:hover {
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  .team-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--verde-oscuro); /* Color destacado */
+  }
+  
+  .team-card p {
+    font-size: 1rem;
+    color: var(--gris-oscuro); /* Texto más suave */
+  }
+  /* Tarjetas del Equipo */
+.team-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  }
+  
+  .team-card img:hover {
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  .team-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--verde-oscuro);
+  }
+  
+  .team-card p {
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+  }
+  
+  /* Modal */
+  .modal-content {
+    background: none; /* Fondo transparente */
+    border: none; /* Sin bordes */
+  }
+  
+/* Estilos de Contacto */
+form {
+    background-color: var(--cafe-cortado); /* Fondo suave */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  }
+  
+  form .form-control {
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  form .form-control:focus {
+    border-color: var(--azul); /* Color al hacer foco */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Efecto al enfocar */
+  }
+  
+  form button {
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Suavidad en los botones */
+  }
+  
+  form button:hover {
+    background-color: var(--verde-natural); /* Cambia el color al pasar el cursor */
+    color: white;
+  }
+  
+  .list-unstyled li i {
+    margin-right: 10px; /* Separación de íconos */
+  }
+  
+  img.rounded {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover en imagen */
+  }
+  
+  img.rounded:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  }
+  
+
+  /* Estilos generales para formularios */
+form {
+    max-width: 400px; /* Limitar el ancho del formulario */
+    margin: 0 auto; /* Centrarlo horizontalmente */
+    background-color: var(--cafe-cortado); /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  /* Botones */
+  form button {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  form button:hover {
+    background-color: var(--verde-natural); /* Cambia de color al pasar el cursor */
+    color: white;
+  }
+  
+  /* Títulos de formularios */
+  form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--verde-oscuro); /* Color consistente con la paleta */
+  }
+  
+  .btn-contacto {
+    background-color: #4CAF50; /* Verde Natural */
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavidad */
+  }
+  .btn-contacto:hover {
+    background-color: #03A9F4; /* Azul Claro */
+    transform: scale(1.05); /* Efecto ligero de zoom */
+  }

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Calendario de Cosechas{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center">Calendario de Cosechas</h2>
+    <ul class="list-group">
+        {% for cultivo, fecha, estado in cosechas %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>
+                    <strong>{{ cultivo }}</strong> - {{ estado }}
+                </span>
+                <span class="badge bg-primary">{{ fecha }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+

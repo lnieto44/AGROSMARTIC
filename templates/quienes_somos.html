@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Quiénes Somos - AgroSmartic{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4" data-aos="fade-up">¿Quiénes Somos?</h2>
+  <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+    AgroSmarTic es una Sociedades por Acciones Simplificadas (SAS)</br>
+    Somos un equipo apasionado por la innovación en la agricultura, comprometidos con llevar soluciones sostenibles a los productores.
+  </p>
+  <div class="row gy-4">
+    <!-- Miembro del equipo 1 -->
+    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="team-card">
+        <img src="/static/images/team_negocios.jpeg" 
+             alt="Negocios" 
+             class="img-fluid rounded-circle shadow-sm mb-3 team-image" 
+             data-bs-toggle="modal" 
+             data-bs-target="#imageModal" 
+             data-image="/static/images/team_negocios.jpeg">
+        <h5>Jesus Dario Mosquera</h5>
+        <p class="text-muted">Negocios</p>
+      </div>
+    </div>
+    <!-- Miembro del equipo 2 -->
+    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
+      <div class="team-card">
+        <img src="/static/images/team_developer.jpeg" 
+             alt="Desarrollo" 
+             class="img-fluid rounded-circle shadow-sm mb-3 team-image" 
+             data-bs-toggle="modal" 
+             data-bs-target="#imageModal" 
+             data-image="/static/images/team_developer.jpeg">
+        <h5>Luis Guillermo Nieto Patiño</h5>
+        <p class="text-muted">Programación</p>
+      </div>
+    </div>
+    <!-- Miembro del equipo 3 -->
+    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
+      <div class="team-card">
+        <img src="/static/images/team_comercial.jpeg" 
+             alt="Comercial" 
+             class="img-fluid rounded-circle shadow-sm mb-3 team-image" 
+             data-bs-toggle="modal" 
+             data-bs-target="#imageModal" 
+             data-image="/static/images/team_comercial.jpeg">
+        <h5>Yesenia Chacón Rosero</h5>
+        <p class="text-muted">Comercial</p>
+      </div>
+    </div>
+    <!-- Miembro del equipo 4 -->
+    <div class="col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
+      <div class="team-card">
+        <img src="/static/images/team_finanzas.jpeg" 
+             alt="Finanzas" 
+             class="img-fluid rounded-circle shadow-sm mb-3 team-image" 
+             data-bs-toggle="modal" 
+             data-bs-target="#imageModal" 
+             data-image="/static/images/team_finanzas.jpeg">
+        <h5>Edison Armando Sánchez Agredo</h5>
+        <p class="text-muted">Finanzas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para ampliar imágenes -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
